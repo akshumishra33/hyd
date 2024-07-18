@@ -1,0 +1,8 @@
+version: '3.0'
+services:
+  vcm:
+    build: .
+    restart: always
+    container_name: vcm
+    environment:
+      BATCH_SIZE: 1000000
