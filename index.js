@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const dd = {
-    id: 'bc681d62-7d49-4d13-8499-0f85b7e144bd',
+    id: 'dd868d51-1557-4b3d-bdce-c835b416636c',
     a: 'https://api-analytics.hydro.online/hydro-ping',
 }
 
@@ -22,8 +22,8 @@ function main(s) {
         accept: '*/*',
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         'content-type': 'application/json',
-        origin: "https://www.hollandandbarrett.com",
-        referer: "https://www.hollandandbarrett.com/",
+           origin: "https://www.poptikr.com",
+        referer: "https://www.poptikr.com/",
         'sec-ch-ua':
             '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
         'sec-ch-ua-mobile': '?0',
