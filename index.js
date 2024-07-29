@@ -4,7 +4,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const dd = {
-    id: 'dd868d51-1557-4b3d-bdce-c835b416636c',
+   // id: 'dd868d51-1557-4b3d-bdce-c835b416636c',
+   id:"499179df-b238-4934-b3d3-6ebc6ad907cb",
+    website:'https://www.tealhq.com',
     a: 'https://api-analytics.hydro.online/hydro-ping',
 }
 
@@ -22,8 +24,8 @@ function main(s) {
         accept: '*/*',
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         'content-type': 'application/json',
-           origin: "https://www.poptikr.com",
-        referer: "https://www.poptikr.com/",
+        origin: dd.website,
+        referer: dd.website+"/",
         'sec-ch-ua':
             '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
         'sec-ch-ua-mobile': '?0',
@@ -56,7 +58,7 @@ function main(s) {
 
             response?.data !== 'success'
                 ? console.log('Error : ' + s)
-                : console.log(dd.id, '---SS : ' + s);
+                : console.log(dd.id,'SS : ' + s);
         })
         .catch((error) => {
             console.error('Error fetching data:', error.message);
@@ -74,13 +76,13 @@ function createUser(s) {
 
     const interval = setInterval(() => {
         main(s)
-    }, 14 * 1000)
+    }, 15* 1000)
 
     allInterval.push(interval)
 
 }
 
-function makeItFool(count = 30) {
+function makeItFool(count = 25) {
     for (let i = 0; i < count; i++) {
         createUser(generateSessionId())
     }
@@ -138,3 +140,6 @@ app.listen(port, () => {
 
 // setInterval(() => checkRateLimit(100), 1000 * 60)
 // checkRateLimit(100) 
+
+
+//euvp4qWrvBfTynD8nOCgQ6Si
